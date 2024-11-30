@@ -26,14 +26,16 @@ function rollDice() {
 
     const sum = dice1Value + dice2Value;
 
-    const randomNumber = Math.floor(Math.random() * 10) + 1;
-
     if (sum % 2 === 0) {
+      // Generate a random number for addition between 2 and 10
+      const randomAdd = Math.floor(Math.random() * 9) + 2;
       resultMessageElement.textContent = `Dice results in ${sum}. It's even, you need to add.`;
-      randomNumberElement.textContent = `You need to make ${randomNumber}.`;
+      randomNumberElement.textContent = `You need to make ${randomAdd}.`;
     } else {
+      // Generate a random number for subtraction between 0 and 5
+      const randomSubtract = Math.floor(Math.random() * 6);
       resultMessageElement.textContent = `Dice results in ${sum}. It's odd, you need to subtract.`;
-      randomNumberElement.textContent = `You need to make ${randomNumber}.`;
+      randomNumberElement.textContent = `You need to make ${randomSubtract}.`;
     }
 
     dice1Element.style.animationPlayState = 'paused';
