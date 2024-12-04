@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #5c5c6e;
+    color: #2f158d;
+    margin: 0;
+    padding: 0;
+    background-image: url(math-background-bm2cnrgvziz60xo7.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.dice-face {
+    font-size: 5rem;
+    animation: roll-animation 1s ease-in-out infinite paused;
+}
+
+.result-message {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #740c0c;
+}
+
+button {
+    font-family: serif;
+    background-color: #62db3d;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #009b0d;
+}
+
+/* Dice rolling animation */
+@keyframes roll-animation {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+}
